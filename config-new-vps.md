@@ -2,8 +2,6 @@
 
 Watch the accompanying tutorial on YouTube: https://www.youtube.com/watch?v=2T_Dx7YgBFw
 
----
-
 ## Instructions & Commands
 
 ### 1. Get your VPS server using password
@@ -105,10 +103,11 @@ sudo nano /etc/ssh/sshd_config
 ```
 
 #### SSH Hardening
-- Disable IPv6:
+- Disable IPv6: remove comment at line `#AddressFamily any` and replace by:
 ```text
 AddressFamily inet
 ```
+(This disables IPv6 IP addresses and it only keeps IPv4 enabled. This is considered a good security practice because we don’t use IPv6 for anything here. So it’s a good idea to lock this and not make it available anymore because it’s just another attack vector for people to access our server)
 
 - Disable password authentication:
 ```text
@@ -121,12 +120,13 @@ PermitRootLogin no
 ```
 
 ### 16. Clear included SSH config (if exists)
+- If there is an included `.conf` file, make it empty. E.g.
 ```bash
 sudo nano /etc/ssh/sshd_config.d/*.conf
 ```
 Delete all content inside the file.
 
-### 17. Restart SSH service
+### 17. Restart SSH
 ```bash
 sudo systemctl restart ssh
 ```
@@ -158,6 +158,7 @@ sudo ufw status
 ```
 
 ### 23. Disable ping (ICMP echo request)
+(E.g. ping 128.199.244.223 -t). So when we ping our server, we don’t get a response back.
 
 Open firewall rules:
 ```bash
