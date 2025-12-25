@@ -158,7 +158,7 @@ sudo ufw status
 ```
 
 ### 23. Disable ping (ICMP echo request)
-(E.g. ping 128.199.244.223 -t). So when we ping our server, we don’t get a response back.
+(E.g. `ping 128.199.244.223 -t`). So when we ping our server, we don’t get a response back.
 
 Open firewall rules:
 ```bash
