@@ -14,6 +14,9 @@ This repository is intended to be:
 - [Simple steps to config a new VPS](./config-new-vps.md)
 - [How to Setup PostgreSQL on a VPS](./setup-postgresql-on-vps.md)
 
+### 🛠️ Tools & Utilities
+- [DBeaver Tips and Tricks](./dbeaver-tips.md)
+
 (More guides will be added over time.)
 
 ## 🚀 Purpose
