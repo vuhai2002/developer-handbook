@@ -12,6 +12,7 @@ This repository is intended to be:
 
 ### 🔐 Server & Infrastructure
 - [Simple steps to config a new VPS](./config-new-vps.md)
+- [How to Setup PostgreSQL on a VPS](./setup-postgresql-on-vps.md)
 
 (More guides will be added over time.)
 
