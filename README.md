@@ -38,14 +38,6 @@ Depending on the document, this handbook may include:
 - Backend development notes
 - General developer best practices
 
-## 📂 Structure
-```text
-developer-handbook/
-├── README.md
-├── config-new-vps.md
-└── (more guides in the future)
-```
-
 ## ⚠️ Disclaimer
 
 This handbook reflects **personal experience and preferences**.  
