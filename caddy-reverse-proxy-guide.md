@@ -106,12 +106,35 @@ docker compose logs -f
 
 Mỗi khi bạn có một ứng dụng mới (ví dụ dịch vụ chạy trên port 3000 bằng Docker), bạn chỉ cần làm theo 3 bước chuẩn sau:
 
-### 1️⃣ Kết nối container mới vào network của Caddy
-Giả sử container của ứng dụng mới tên là `my-new-app`.
+### 1️⃣ Kết nối container mới vào network của Caddy (Khuyến nghị dùng Docker Compose)
+
+Vì cả Caddy và ứng dụng của bạn đều chạy trong Docker, thiết lập đúng nhất (Best Practice) là cho ứng dụng tự động join vào network của Caddy (ví dụ `caddy-net`) trực tiếp thông qua file `docker-compose.yml`.
+
+**Cách 1: Cấu hình tự động qua docker-compose (Khuyến nghị 🌟)**
+
+Thêm đoạn cấu hình networks này vào file `docker-compose.yml` của ứng dụng mới:
+
+```yaml
+services:
+  my-new-app:
+    # ... (các cấu hình image, ports...)
+    networks:
+      - caddy-net
+
+networks:
+  caddy-net:
+    external: true
+```
+
+*Giải thích*: Cờ `external: true` báo cho Docker biết network `caddy-net` đã tồn tại bên ngoài (do Caddy tạo ra trước). Khi chạy `docker compose up -d`, container sẽ tự động gia nhập network này. Việc này đảm bảo ứng dụng có thể mang đi bất kỳ VPS nào cũng tự động chạy đúng cách mà không cần lệnh thủ công.
+
+**Cách 2: Gắn network thủ công bằng câu lệnh (Tạm thời)**
+
+Nếu ứng dụng đã chạy và bạn không thể sửa docker-compose ngay, bạn có thể chạy:
 ```bash
 docker network connect caddy-net my-new-app
 ```
-*Lưu ý: Tốt nhất là khai báo network `caddy-net` trực tiếp trong file `docker-compose.yml` của ứng dụng mới luôn để tự động bắt mạng khi khởi động lên.*
+*(Lưu ý: Cách này sẽ làm container mất mạng nếu bị tạo lại/rebuild).*
 
 ### 2️⃣ Cập nhật cấu hình vào `Caddyfile`
 Mở file Caddyfile lên và thêm cấu hình domain mới:
@@ -135,3 +158,16 @@ docker exec caddy-proxy caddy reload --config /etc/caddy/Caddyfile
 
 **Xong!** 
 Khi chạy lệnh này, Caddy sẽ tự nhận diện domain mới `newapp.vuhai.me`, tự động đi xin chứng chỉ SSL từ Let's Encrypt và bắt đầu chuyển tiếp requests ngay lập tức.
+
+---
+
+### ⚠️ Lưu ý CỰC KỲ QUAN TRỌNG khi Caddy cấu hình bằng Docker
+
+Vì Caddy đang được chạy trong một Docker Container riêng, bạn cần nhớ quy tắc kết nối sau:
+
+1. **KHÔNG DÙNG**: `reverse_proxy localhost:3000` ❌
+   Bởi vì khái niệm `localhost` lúc này không phải là chiếc máy VPS của bạn, mà là bản thân cái container chạy Caddy. Nên nó sẽ tìm kiếm dịch vụ ở port 3000 bên trong *chính container Caddy*, dẫn đến lỗi `502 Bad Gateway`.
+
+2. **CÁCH DÙNG ĐÚNG**: `reverse_proxy tên-container:3000` ✅
+   Khi Caddy và App đã chung network `caddy-net`, Docker có hỗ trợ DNS nội bộ. Bạn chỉ cần dùng đúng `container_name` khai báo trong `docker-compose.yml` của app làm tên miền trỏ tới.
+   *(Ví dụ: `reverse_proxy my-new-app:3000`)*
