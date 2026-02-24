@@ -20,6 +20,7 @@ This repository is intended to be:
 ### 🛠️ Tools & Utilities
 - [DBeaver Tips and Tricks](./dbeaver-tips.md)
 - [Git Rollback & Safe VPS Update Guide](./git-rollback-vps-guide.md)
+- [Bypass SSL Pinning & Debug Android App](./android-app-debug-bypass-ssl.md)
 
 (More guides will be added over time.)
 
