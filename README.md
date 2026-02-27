@@ -18,6 +18,7 @@ This repository is intended to be:
 - [How to Setup Automated Maintenance Page with Caddy](./caddy-maintenance-page-guide.md)
 
 ### 🛠️ Tools & Utilities
+- [Hướng dẫn Cài đặt Email bằng Brevo API (Thay thế SMTP)](./setup-brevo-email.md)
 - [DBeaver Tips and Tricks](./dbeaver-tips.md)
 - [Git Rollback & Safe VPS Update Guide](./git-rollback-vps-guide.md)
 - [Bypass SSL Pinning & Debug Android App](./android-app-debug-bypass-ssl.md)
