@@ -22,6 +22,7 @@ This repository is intended to be:
 - [DBeaver Tips and Tricks](./dbeaver-tips.md)
 - [Git Rollback & Safe VPS Update Guide](./git-rollback-vps-guide.md)
 - [Bypass SSL Pinning & Debug Android App](./android-app-debug-bypass-ssl.md)
+- [Hướng dẫn cấu hình API Key và Webhook SePay](./setup-sepay-webhook.md)
 
 (More guides will be added over time.)
 
