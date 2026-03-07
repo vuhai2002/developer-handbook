@@ -19,6 +19,7 @@ This repository is intended to be:
 
 ### 🛠️ Tools & Utilities
 - [Hướng dẫn Cài đặt Email bằng Brevo API (Thay thế SMTP)](./setup-brevo-email.md)
+- [Cấu hình Google OAuth với Domain mới](./config-google-oauth-domain.md)
 - [DBeaver Tips and Tricks](./dbeaver-tips.md)
 - [Git Rollback & Safe VPS Update Guide](./git-rollback-vps-guide.md)
 - [Bypass SSL Pinning & Debug Android App](./android-app-debug-bypass-ssl.md)
