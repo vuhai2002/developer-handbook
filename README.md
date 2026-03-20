@@ -16,6 +16,7 @@ This repository is intended to be:
 - [Fix Docker not connecting to PostgreSQL on VPS](./docker-network-postgres-fix.md)
 - [How to Setup Caddy Reverse Proxy on a VPS](./caddy-reverse-proxy-guide.md)
 - [How to Setup Automated Maintenance Page with Caddy](./caddy-maintenance-page-guide.md)
+- [Tối ưu hiệu suất VPS: Swap, PostgreSQL & DB Pool](./optimize-vps-postgresql.md)
 
 ### 🛠️ Tools & Utilities
 - [Hướng dẫn Cài đặt Email bằng Brevo API (Thay thế SMTP)](./setup-brevo-email.md)
