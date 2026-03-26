@@ -27,6 +27,7 @@ This repository is intended to be:
 - [Bypass SSL Pinning & Debug Android App](./android-app-debug-bypass-ssl.md)
 - [Hướng dẫn cấu hình API Key và Webhook SePay](./setup-sepay-webhook.md)
 - [Kiểm tra & Xóa Cache OG Image trên các Nền tảng Mạng xã hội](./check-og-image-social-platforms.md)
+- [Hướng Dẫn Cấu Hình Vertex AI Để Sử Dụng Gemini API](./setup-vertex-ai-gemini.md)
 
 (More guides will be added over time.)
 
