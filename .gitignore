@@ -1,0 +1,6 @@
+# Claude Code - local/personal settings (do not commit)
+.claude/settings.local.json
+
+# OS junk
+.DS_Store
+Thumbs.db
