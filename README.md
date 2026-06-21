@@ -12,6 +12,7 @@ This repository is intended to be:
 
 ### 🔐 Server & Infrastructure
 - [Simple steps to config a new VPS](./config-new-vps.md)
+- [Đặt App ở đâu trên VPS? Cấu trúc thư mục chuẩn (/opt/apps)](./vps-app-directory-structure.md)
 - [How to Setup PostgreSQL on a VPS](./setup-postgresql-on-vps.md)
 - [Fix Docker not connecting to PostgreSQL on VPS](./docker-network-postgres-fix.md)
 - [How to Setup Caddy Reverse Proxy on a VPS](./caddy-reverse-proxy-guide.md)
