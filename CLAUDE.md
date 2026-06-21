@@ -1,6 +1,6 @@
 # Developer Handbook - hướng dẫn cho Claude Code
 
-Kho cẩm nang dev cá nhân: các guide how-to dạng markdown phẳng ở gốc repo; `README.md` là index (mục `🔐 Server & Infrastructure` + `🛠️ Tools & Utilities`).
+Kho cẩm nang dev cá nhân: các guide how-to (markdown) chia theo folder chủ đề - `vps/`, `database/`, `integrations/`, `dev-tools/`; `README.md` ở gốc là index.
 
 ## Repo này là PUBLIC (cực kỳ quan trọng)
 

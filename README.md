@@ -10,30 +10,34 @@ This repository is intended to be:
 
 ## 📌 Contents
 
-### 🔐 Server & Infrastructure
-- [Simple steps to config a new VPS](./config-new-vps.md)
-- [Đặt App ở đâu trên VPS? Cấu trúc thư mục chuẩn (/opt/apps)](./vps-app-directory-structure.md)
-- [How to Setup PostgreSQL on a VPS](./setup-postgresql-on-vps.md)
-- [Fix Docker not connecting to PostgreSQL on VPS](./docker-network-postgres-fix.md)
-- [How to Setup Caddy Reverse Proxy on a VPS](./caddy-reverse-proxy-guide.md)
-- [How to Setup Automated Maintenance Page with Caddy](./caddy-maintenance-page-guide.md)
-- [Tối ưu hiệu suất VPS: Swap, PostgreSQL & DB Pool](./optimize-vps-postgresql.md)
-- [VPS Quick Check — Kiểm Tra Nhanh Thông Số VPS](./vps-quick-check.md)
-- [Kết nối Database qua SSH Tunnel (Local Dev) & Localhost (Production)](./ssh-tunnel-database-local.md)
-- [Clone PostgreSQL Database từ VPS về Local (Windows)](./clone-postgres-vps-to-local-windows.md)
-- [Migrate PostgreSQL Database giữa 2 VPS (pg_dump + restore)](./migrate-postgres-vps-to-vps.md)
-- [Phục vụ Media qua Cloudflare CDN + Backblaze B2 (Egress miễn phí)](./setup-media-cdn-cloudflare-b2.md)
+### 🖥️ VPS - dựng & vận hành server
+- [Simple steps to config a new VPS](./vps/config-new-vps.md)
+- [Đặt App ở đâu trên VPS? Cấu trúc thư mục chuẩn (/opt/apps)](./vps/vps-app-directory-structure.md)
+- [VPS Quick Check — Kiểm Tra Nhanh Thông Số VPS](./vps/vps-quick-check.md)
+- [How to Setup Caddy Reverse Proxy on a VPS](./vps/caddy-reverse-proxy-guide.md)
+- [How to Setup Automated Maintenance Page with Caddy](./vps/caddy-maintenance-page-guide.md)
+- [Phục vụ Media qua Cloudflare CDN + Backblaze B2 (Egress miễn phí)](./vps/setup-media-cdn-cloudflare-b2.md)
 
-### 🛠️ Tools & Utilities
-- [Hướng dẫn Cài đặt Email bằng Brevo API (Thay thế SMTP)](./setup-brevo-email.md)
-- [Cấu hình Google OAuth với Domain mới](./config-google-oauth-domain.md)
-- [DBeaver Tips and Tricks](./dbeaver-tips.md)
-- [Git Rollback & Safe VPS Update Guide](./git-rollback-vps-guide.md)
-- [Bypass SSL Pinning & Debug Android App](./android-app-debug-bypass-ssl.md)
-- [Hướng dẫn cấu hình API Key và Webhook SePay](./setup-sepay-webhook.md)
-- [Kiểm tra & Xóa Cache OG Image trên các Nền tảng Mạng xã hội](./check-og-image-social-platforms.md)
-- [Hướng Dẫn Cấu Hình Vertex AI Để Sử Dụng Gemini API](./setup-vertex-ai-gemini.md)
-- [Hướng dẫn sửa lỗi kết nối Claude Code trên Windows (ECONNREFUSED & Bun Crash)](./claude-code-windows-fix.md)
+### 🗄️ Database - PostgreSQL & công cụ DB
+- [How to Setup PostgreSQL on a VPS](./database/setup-postgresql-on-vps.md)
+- [Tối ưu hiệu suất VPS: Swap, PostgreSQL & DB Pool](./database/optimize-vps-postgresql.md)
+- [Fix Docker not connecting to PostgreSQL on VPS](./database/docker-network-postgres-fix.md)
+- [Kết nối Database qua SSH Tunnel (Local Dev) & Localhost (Production)](./database/ssh-tunnel-database-local.md)
+- [Clone PostgreSQL Database từ VPS về Local (Windows)](./database/clone-postgres-vps-to-local-windows.md)
+- [Migrate PostgreSQL Database giữa 2 VPS (pg_dump + restore)](./database/migrate-postgres-vps-to-vps.md)
+- [DBeaver Tips and Tricks](./database/dbeaver-tips.md)
+
+### 🔌 Integrations - dịch vụ & API bên thứ 3
+- [Hướng dẫn Cài đặt Email bằng Brevo API (Thay thế SMTP)](./integrations/setup-brevo-email.md)
+- [Hướng dẫn cấu hình API Key và Webhook SePay](./integrations/setup-sepay-webhook.md)
+- [Hướng Dẫn Cấu Hình Vertex AI Để Sử Dụng Gemini API](./integrations/setup-vertex-ai-gemini.md)
+- [Cấu hình Google OAuth với Domain mới](./integrations/config-google-oauth-domain.md)
+- [Kiểm tra & Xóa Cache OG Image trên các Nền tảng Mạng xã hội](./integrations/check-og-image-social-platforms.md)
+
+### 🧰 Dev Tools - tiện ích dev & local
+- [Git Rollback & Safe VPS Update Guide](./dev-tools/git-rollback-vps-guide.md)
+- [Bypass SSL Pinning & Debug Android App](./dev-tools/android-app-debug-bypass-ssl.md)
+- [Hướng dẫn sửa lỗi kết nối Claude Code trên Windows (ECONNREFUSED & Bun Crash)](./dev-tools/claude-code-windows-fix.md)
 
 (More guides will be added over time.)
 

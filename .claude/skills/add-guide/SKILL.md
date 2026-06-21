@@ -9,11 +9,17 @@ Người dùng cung cấp 1 đoạn chat / tài liệu thô / chủ đề. Nhi�
 
 ## Quy trình
 
-### 1. Tổng hợp + đặt tên
+### 1. Tổng hợp + đặt tên + chọn folder
 - Lọc thông tin chính (công cụ, quy trình, lệnh, lỗi thường gặp) từ nội dung người dùng đưa.
-- Đặt **tiêu đề ngắn** (tiếng Việt) + **tên file kebab-case** ở gốc repo, vd `setup-redis-cache.md`, `fix-nginx-502.md`.
+- Đặt **tiêu đề ngắn** (tiếng Việt) + **tên file kebab-case**, vd `setup-redis-cache.md`, `fix-nginx-502.md`.
+- **Chọn folder chủ đề** để đặt file:
+  - `vps/` - dựng & vận hành server (VPS, Caddy/proxy, CDN).
+  - `database/` - PostgreSQL & công cụ DB.
+  - `integrations/` - dịch vụ / API bên thứ 3 (email, payment, OAuth, AI...).
+  - `dev-tools/` - tiện ích dev / local (git, debug, môi trường dev).
+  - Không khớp hẳn -> chọn folder gần nhất (đừng tạo folder mới trừ khi thực sự cần 1 nhóm mới).
 
-### 2. Viết file guide (ở gốc repo)
+### 2. Viết file guide (trong folder đã chọn)
 Theo khung `resources/guide-template.md`. Cấu trúc BẮT BUỘC:
 - **H1** tiêu đề + **mô tả ngắn** (1-2 câu: guide để làm gì).
 - `## ⚡ Tóm tắt Thao tác Nhanh (Quick Reference)` - lệnh/step rút gọn, copy-paste, KHÔNG giải thích dài.
@@ -21,8 +27,8 @@ Theo khung `resources/guide-template.md`. Cấu trúc BẮT BUỘC:
 - (tùy chọn) `## ⚠️ Troubleshooting / Lưu ý`.
 
 ### 3. Cập nhật README.md
-- Tìm mục phù hợp trong `## 📌 Contents`: `🔐 Server & Infrastructure` (server/VPS/DB/network/proxy) hoặc `🛠️ Tools & Utilities` (công cụ/tích hợp/tiện ích).
-- Chèn dòng: `- [Tiêu đề](./ten-file.md)`.
+- Tìm mục trong `## 📌 Contents` khớp folder đã chọn: `🖥️ VPS`, `🗄️ Database`, `🔌 Integrations`, hoặc `🧰 Dev Tools`.
+- Chèn dòng: `- [Tiêu đề](./<folder>/<ten-file>.md)` - link **PHẢI có folder**, vd `./vps/setup-x.md`.
 
 ### 4. Guardrail BẮT BUỘC (repo PUBLIC)
 - **Chỉ placeholder generic**: `example.com`, `app.example.com`, `<bucket>`, `fNNN`, `<path>`, `<token>`... KHÔNG domain/IP/bucket/secret thật.
@@ -35,7 +41,7 @@ Theo khung `resources/guide-template.md`. Cấu trúc BẮT BUỘC:
   Có nghi vấn -> đổi thành placeholder, quét lại tới khi sạch.
 
 ### 5. Commit + push
-- `git add <file-moi>.md README.md`
+- `git add <folder>/<file-moi>.md README.md`
 - `git commit -m "docs: add <tiêu đề>"` (conventional commit, KHÔNG có AI reference).
 - `git push`.
 

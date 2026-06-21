@@ -102,5 +102,5 @@ sudo install -d -o root -g deploy -m 2775 /opt/apps   # 2775 = setgid
 ### Vị trí những thứ liên quan khác
 Guide này chỉ bàn **chỗ đặt code app**. Các thành phần khác đặt nơi riêng:
 - **Caddy reverse proxy**: đặt riêng, KHÔNG nằm trong thư mục app. Tùy cách bạn chạy: Caddy trên **host** (cài qua apt) thì config ở `/etc/caddy/Caddyfile`; Caddy trong **Docker** thì config ở `~/services/caddy/` (xem [caddy-reverse-proxy-guide](./caddy-reverse-proxy-guide.md)). Dù cách nào, Caddy là hạ tầng dựng 1 lần nên không để chung trong `/opt/apps`.
-- **Database**: dùng Postgres sẵn trên host hay bundle trong Docker - xem [setup-postgresql-on-vps](./setup-postgresql-on-vps.md) và [ssh-tunnel-database-local](./ssh-tunnel-database-local.md).
+- **Database**: dùng Postgres sẵn trên host hay bundle trong Docker - xem [setup-postgresql-on-vps](../database/setup-postgresql-on-vps.md) và [ssh-tunnel-database-local](../database/ssh-tunnel-database-local.md).
 - **Data có state** (db, file upload): ưu tiên **Docker named volume** (Docker tự quản lý ở `/var/lib/docker/volumes`, không mất khi rebuild container) hoặc **bind mount** (map thẳng một thư mục như `./data` trong app vào container). Tránh để data sống bên trong container vì rebuild là mất sạch.
