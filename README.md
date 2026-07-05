@@ -30,7 +30,7 @@ This repository is intended to be:
 ### 🔌 Integrations - dịch vụ & API bên thứ 3
 - [Hướng dẫn Cài đặt Email bằng Brevo API (Thay thế SMTP)](./integrations/setup-brevo-email.md)
 - [Hướng dẫn cấu hình API Key và Webhook SePay](./integrations/setup-sepay-webhook.md)
-- [Hướng Dẫn Cấu Hình Vertex AI Để Sử Dụng Gemini API](./integrations/setup-vertex-ai-gemini.md)
+- [Cấu hình Vertex AI (Gemini Enterprise Agent Platform) để dùng Gemini API](./integrations/setup-vertex-ai-gemini-api.md)
 - [Cấu hình Google OAuth với Domain mới](./integrations/config-google-oauth-domain.md)
 - [Kiểm tra & Xóa Cache OG Image trên các Nền tảng Mạng xã hội](./integrations/check-og-image-social-platforms.md)
 
